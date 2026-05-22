@@ -1,13 +1,7 @@
 {
-  "name": "DLwPyTorch 2e – JupyterLab",
+  "name": "DLwPyTorch 2e – JupyterLab (CPU)",
   "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
-  "features": {
-    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
-      "installCudnn": true,
-      "version": "12.1"
-    }
-  },
-  "postCreateCommand": "pip install --upgrade pip && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 && pip install jupyterlab ipywidgets torchinfo torchviz matplotlib seaborn pandas numpy scipy scikit-learn transformers accelerate diffusers huggingface-hub gradio plotly simpleitk",
+  "postCreateCommand": "pip install --upgrade pip && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu && pip install jupyterlab ipywidgets torchinfo torchviz matplotlib seaborn pandas numpy scipy scikit-learn plotly",
   "forwardPorts": [8888],
   "portsAttributes": {
     "8888": {
